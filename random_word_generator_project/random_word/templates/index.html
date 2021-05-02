@@ -19,6 +19,7 @@
             <strong>{{request.session.randomWord}}</strong>
         </div>
         <div>
+            <!-- Generate random word from /random_word method -->
             <form action="/random_word" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="randomize" value="newWord">
@@ -26,6 +27,7 @@
             </form>
         </div>
         <div>
+            <!-- reset session variable counter & random string -->
             <form action="/random_word/reset" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="Resetbutton" value="reset">
